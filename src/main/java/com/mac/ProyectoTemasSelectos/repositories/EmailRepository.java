@@ -12,5 +12,5 @@ import jakarta.mail.MessagingException;
  * @author jimena
  */
 public interface EmailRepository {
-    public void sendMail(EmailModel emailModel) throws MessagingException;
+    
 }

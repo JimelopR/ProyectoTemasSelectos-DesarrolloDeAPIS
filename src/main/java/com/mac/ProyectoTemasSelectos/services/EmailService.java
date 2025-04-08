@@ -20,7 +20,7 @@ import com.mac.ProyectoTemasSelectos.repositories.EmailRepository;
  */
 
 @Service
-public class EmailService implements EmailRepository  {
+public class EmailService  {
     private final JavaMailSender javaMailSender;
     private final TemplateEngine templateEngine;
 
@@ -29,10 +29,12 @@ public class EmailService implements EmailRepository  {
         this.templateEngine = templateEngine;
     }
 
-    @Override
     public void sendMail(EmailModel emailModel) throws MessagingException {
         
         try{
+            
+             // Creamos el modelo de correo
+            
             MimeMessage message = javaMailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true,"UTF-8");
             helper.setTo(emailModel.getUsuario());
