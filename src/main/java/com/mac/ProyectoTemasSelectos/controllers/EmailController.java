@@ -6,12 +6,9 @@ package com.mac.ProyectoTemasSelectos.controllers;
 
 import com.mac.ProyectoTemasSelectos.models.EmailModel;
 import com.mac.ProyectoTemasSelectos.models.UsuarioModel;
-import com.mac.ProyectoTemasSelectos.repositories.TipoUsuarioRepository;
-import com.mac.ProyectoTemasSelectos.repositories.UsuarioRepository;
 import com.mac.ProyectoTemasSelectos.services.EmailService;
 import com.mac.ProyectoTemasSelectos.services.UsuarioService;
 import jakarta.mail.MessagingException;
-import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,11 +25,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/email")
 public class EmailController {
-    
 
-    
     @Autowired
     private UsuarioService usuarioService;
     

@@ -49,6 +49,14 @@ public class UsuarioModel {
     @Column(name = "apellido_materno")
     private String apellidoMaterno; 
 
+    // Constructor con parámetros
+    public UsuarioModel(String correo, String password) {
+        this.correo = correo;
+        this.password = password;
+    }
+    public UsuarioModel() {
+    }
+
     
      // Getters y Setters
     public String getPassword() {
